@@ -25,3 +25,4 @@ function deleteNote(button) {
     const noteItem = button.parentElement;
     noteItem.remove();
 }
+//za
