@@ -26,3 +26,6 @@ function deleteNote(button) {
     noteItem.remove();
 }
 //za
+
+    
+
