@@ -5,15 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notion Inspired Page</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.js">
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блокнот для записи слов</title>
+    <script src="index.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -57,6 +49,11 @@
         .note-group button:hover {
             background-color: #45a049;
         }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -74,6 +71,9 @@
     </form>
     <h3>Сохраненные слова:</h3>
     <ul id="wordList"></ul>
+</div>
+<div class="button-container">
+    <button id="deleteAll">Удалить все</button>
 </div>
 
 <script>
@@ -107,10 +107,18 @@
             document.getElementById('word').value = '';
         }
     });
-</script>
 
-</body>
-</html>
+    document.getElementById('deleteAll').addEventListener('click', () => {
+        // Удаление всех слов из localStorage
+        localStorage.removeItem('words');
+
+        // Очистка списка на странице
+        const wordList = document.getElementById('wordList');
+        while (wordList.firstChild) {
+            wordList.removeChild(wordList.firstChild);
+        }
+    });
+</script>
 
 </body>
 </html>
