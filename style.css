@@ -75,16 +75,41 @@ table th {
 button {
     margin-left: 10px;
     padding: 5px 10px;
-    background-color: #007bff;
+    background-color: #d61616;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     
+
+
+
+    
+
+
+
+    padding: 10px 15px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    
 }
 
+
+
+
+
+
+
+
+
+
+
+
 button:hover {
-    background-color: #0056b3;
+    background-color: #d61616;
 }
 
 input[type="text"] {
@@ -101,3 +126,4 @@ input[type="text"] {
         padding: 10px;
     }
 }
+
