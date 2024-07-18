@@ -21,9 +21,9 @@ function editNote(button) {
     }
 }
 
-function deleteNote(button) {
+function deleteNote(button) {                                 
     const noteItem = button.parentElement;
-    noteItem.remove();
+    noteItem.remove();                                        //функционал добавления слов в блокнот старая версия??
 }
 //za
 console.log("nothing")
